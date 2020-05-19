@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="12dp"
+    tools:context=".coding.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/items_bg"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select category" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cb_any"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Any" />
+
+                <CheckBox
+                    android:id="@+id/cb_programming"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Programming" />
+
+                <CheckBox
+                    android:id="@+id/cb_miscellaneous"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Miscellaneous" />
+
+                <CheckBox
+                    android:id="@+id/cb_dark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dark" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/items_bg"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                style="@style/text_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select flags to blacklist (optional)" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cb_nsfw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="nsfw" />
+
+                <CheckBox
+                    android:id="@+id/cb_religious"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="religious" />
+
+                <CheckBox
+                    android:id="@+id/cb_political"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="political" />
+
+                <CheckBox
+                    android:id="@+id/cb_racist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="racist" />
+
+                <CheckBox
+                    android:id="@+id/cb_sexist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="sexist" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_joke_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/items_bg"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select at least one joke type" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cb_single"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="single" />
+
+                <CheckBox
+                    android:id="@+id/cb_twopart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="two part" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_submit"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/colorAccent"
+            android:text="Submit"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/items_bg"
+            android:gravity="center"
+            android:hint="Your Jok"
+            android:padding="12dp"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="150dp"
+        android:visibility="invisible"
+        android:indeterminateTint="@android:color/darker_gray" />
+</FrameLayout>
